@@ -34,7 +34,7 @@ public class ApiServletModule extends ServletModule {
         params.put("ws-name", "default");
         params.put("ws-id", "1q2w3e");
         filter("/*").through(SingleEnvironmentFilter.class, params);
-        serveRegex("^((?!(\\/(ws|eventbus)($|\\/.*)))\\/.*)").with(org.everrest.guice.servlet.GuiceEverrestServlet.class);
+        serveRegex("^\\/api\\/((?!(\\/(ws|eventbus)($|\\/.*)))\\/.*)").with(org.everrest.guice.servlet.GuiceEverrestServlet.class);
 
 
     }
