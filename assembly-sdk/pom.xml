@@ -32,6 +32,12 @@
             <type>zip</type>
         </dependency>
         <dependency>
+            <groupId>com.codenvy.resources</groupId>
+            <artifactId>codenvy-tomcat7</artifactId>
+            <version>6-SNAPSHOT</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
             <groupId>org.eclipse.che.plugin</groupId>
             <artifactId>che-plugin-datasource-server-war-sdk</artifactId>
             <version>${che.plugins.version}</version>
@@ -168,6 +174,25 @@
                                     <overWrite>false</overWrite>
                                 </artifactItem>
                             </artifactItems>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>unpack-tomcat7</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>unpack</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>com.codenvy.resources</groupId>
+                                    <artifactId>codenvy-tomcat7</artifactId>
+                                    <version>6-SNAPSHOT</version>
+                                    <type>zip</type>
+                                    <overWrite>false</overWrite>
+                                </artifactItem>
+                            </artifactItems>
+                            <outputDirectory>${project.build.directory}/dependency/tomcat</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>
