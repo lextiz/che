@@ -27,13 +27,13 @@
     <dependencies>
         <dependency>
             <groupId>com.codenvy.resources</groupId>
-            <artifactId>codenvy-tomcat-slf4j-logback</artifactId>
+            <artifactId>codenvy-tomcat7</artifactId>
             <version>6-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
         <dependency>
             <groupId>com.codenvy.resources</groupId>
-            <artifactId>codenvy-tomcat7</artifactId>
+            <artifactId>codenvy-tomcat8-slf4j-logback</artifactId>
             <version>6-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
@@ -168,8 +168,9 @@
                             <artifactItems>
                                 <artifactItem>
                                     <groupId>com.codenvy.resources</groupId>
-                                    <artifactId>codenvy-tomcat-slf4j-logback</artifactId>
-                                    <version>6-SNAPSHOT</version>
+                                    <artifactId>codenvy-tomcat8-slf4j-logback</artifactId>
+                                    <version>${version.resource-bundle}</version>
+                                    &gt;
                                     <type>zip</type>
                                     <overWrite>false</overWrite>
                                 </artifactItem>
@@ -187,7 +188,7 @@
                                 <artifactItem>
                                     <groupId>com.codenvy.resources</groupId>
                                     <artifactId>codenvy-tomcat7</artifactId>
-                                    <version>6-SNAPSHOT</version>
+                                    <version>${version.resource-bundle}</version>
                                     <type>zip</type>
                                     <overWrite>false</overWrite>
                                 </artifactItem>
